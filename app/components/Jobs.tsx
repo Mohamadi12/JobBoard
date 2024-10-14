@@ -10,7 +10,7 @@ const Jobs = ({ header, jobs }: { header: string; jobs: Job[] }) => {
 
         <div className="flex flex-col gap-4">
           {!jobs?.length && <div>No jobs found</div>}
-          {jobs && jobs.map((job) => <JobRow jobDoc={job} />)}
+          {jobs && jobs.map((job,index) => <JobRow key={index} jobDoc={job} />)}
         </div>
       </div>
     </div>

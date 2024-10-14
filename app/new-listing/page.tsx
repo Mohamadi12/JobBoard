@@ -42,6 +42,7 @@ export default async function NewListingPage() {
             {Object.keys(organizationsNames).map(orgId => (
               <Link
               href={`/new-listing/${orgId}`}
+              key={orgId}
                 className={
                   "py-2 px-4 flex gap-2 items-center "
                   + (Object.keys(organizationsNames)[0] === orgId ? '' : 'border-t')
